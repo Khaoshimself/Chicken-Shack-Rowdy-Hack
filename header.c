@@ -4,15 +4,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void cardCounter(){
+bool cardCount(int count){
   
 }
-void getCard(){
+int dealCard(){
   
 }
-void scoreCal(){
+int calScore(int[]){
   
 }
-void determineWinner(){
+void playerInfo(int p1, int p2, int p3, int p4){
   
 }
