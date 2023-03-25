@@ -13,6 +13,7 @@ int main(void){
   int hitDecision;
   int p1Count = 0, p2Count = 0, p3Count = 0, p4Count = 0;
   int p1Score = 0, p2Score = 0, p3Score = 0, p4Score = 0;
+  int card;
   
   
   printf("Welcome to Black Jack! \n How many players?");
@@ -20,26 +21,43 @@ int main(void){
   
   if (numPlayers >= 1). //INITIAL DEALING OF THE CARDS
   {
-    dealCards(p1[], p1Count);
-    dealCards(p1[], p1Count);
+    
+    for (int i = 0; i < 2; i++) {
+      card = dealcard();
+      p1[p1count] = card;
+      p1count++;
+      }
     
     }
   if (numPlayers >= 2)
   {
-    dealCards(p2[]);
-    dealCards(p2[]);
+      
+      for (int i = 0; i < 2; i++) {
+      card = dealcard();
+      p2[p2count] = card;
+      p2count++;
+      }
+         
     }
   if (numPlayers >= 3)
   {
-    dealCards(p3[]);
-    dealCards(p3[]);
+    
+    for (int i = 0; i < 2; i++) {
+      card = dealcard();
+      p3[p3count] = card;
+      p3count++;
+      }
+    
     }
   if (numPlayers >= 4)
   {
-    dealCards(p4[]);
-    dealCards(p4[]);
-    }
-
-      
+    
+    for (int i = 0; i < 2; i++) {
+      card = dealcard();
+      p4[p4count] = card;
+      p4count++;
+      }
+    
+    }    
   
 }
