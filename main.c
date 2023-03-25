@@ -13,7 +13,8 @@ int main(void){
   int p2[10];
   int p3[10];
   int p4[10];
-
+  int winner = 0;
+  int winnerscore = 0;
   int p1Score = 0, p2Score = 0, p3Score = 0, p4Score = 0;
   
   
@@ -138,6 +139,34 @@ int main(void){
     } while (hitdecision == 1 && p4score != -1);
   }
   
+  if (p1score > winnerscore){
+      winner = 1;
+      winnerscore = p1score;
+  }
+  
+  if (p2score > winnerscore)
+  {
+    winner = 2;
+    winnerscore = p2score;
+  }
+  
+  if (p3score > winnerscore)
+  {
+    winner = 3;
+    winnerscore = p3score;
+  }
+  
+  if (p4score > winnerscore)
+  {
+    winner = 4;
+    winnerscore = p4score;
+  }
+  if (winner = 0)
+        printf("\nAll players have busted")
+  else {
+    printf("Player "%d" wins with a score of ");
+    printf(winnerscore);
+  }
 }
 
   
