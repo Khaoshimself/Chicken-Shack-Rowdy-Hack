@@ -68,74 +68,74 @@ int main(void){
       }
     
     }    
-  if (1 <= numplayers)
+  if (1 <= numPlayers)
   {
     do
     {
-      p1score = calScore (p1[]);
-      printf("\nPlayer 1 your score is "%d" enter 1 to hit or 0 to stand", p1score);
-      scanf("%d", &hitdecision);
+      p1Score = calScore (p1[]);
+      printf("\nPlayer 1 your score is "%d" enter 1 to hit or 0 to stand", p1Score);
+      scanf("%d", &hitDecision);
       if (hitdecision = 1)
       {
-        card = dealcard();
-        p1[p1count] = card;
-        p1count++;
+        card = dealCard();
+        p1[p1Count] = card;
+        p1Count++;
       }
-      if (p1score == -1)
+      if (p1Score == -1)
         printf("\nPlayer 1 has busted")
-    } while (hitdecision == 1 && p1score != -1);
+    } while (hitDecision == 1 && p1Score != -1);
   }
   
-  if (2 <= numplayers)
+  if (2 <= numPlayers)
   {
     do
     {
-      p2score = calScore (p2[]);
-      printf("\nPlayer 1 your score is "%d" enter 1 to hit or 0 to stand", p2score);
-      scanf("%d", &hitdecision);
-      if (hitdecision = 1)
+      p2Score = calScore (p2[]);
+      printf("\nPlayer 1 your score is "%d" enter 1 to hit or 0 to stand", p2Score);
+      scanf("%d", &hitDecision);
+      if (hitDecision = 1)
       {
-        card = dealcard();
-        p2[p2count] = card;
-        p2count++;
+        card = dealCard();
+        p2[p2Count] = card;
+        p2Count++;
       }
       if (p2score == -1)
         printf("\nPlayer 2 has busted")
-    } while (hitdecision == 1 && p2score != -1);
+    } while (hitDecision == 1 && p2Score != -1);
   }
-  if (3 <= numplayers)
+  if (3 <= numPlayers)
   {
     do
     {
-      p3score = calScore (p3[]);
-      printf("\nPlayer 1 your score is "%d" enter 1 to hit or 0 to stand", p3score);
-      scanf("%d", &hitdecision);
-      if (hitdecision = 1)
+      p3Score = calScore (p3[]);
+      printf("\nPlayer 1 your score is "%d" enter 1 to hit or 0 to stand", p3Score);
+      scanf("%d", &hitDecision);
+      if (hitDecision = 1)
       {
-        card = dealcard();
-        p3[p3count] = card;
-        p3count++;
+        card = dealCard();
+        p3[p3Count] = card;
+        p3Count++;
       }
-      if (p3score == -1)
+      if (p3Score == -1)
         printf("\nPlayer 3 has busted")
-    } while (hitdecision == 1 && p3score != -1);
+    } while (hitDecision == 1 && p4score != -1);
   }
- if (4 <= numplayers)
+ if (4 <= numPlayers)
   {
     do
     {
-      p4score = calScore (p4[]);
-      printf("\nPlayer 1 your score is "%d" enter 1 to hit or 0 to stand", p4score);
-      scanf("%d", &hitdecision);
-      if (hitdecision = 1)
+      p4Score = calScore (p4[]);
+      printf("\nPlayer 1 your score is "%d" enter 1 to hit or 0 to stand", p4Score);
+      scanf("%d", &hitDecision);
+      if (hitDecision = 1)
       {
-        card = dealcard();
+        card = dealCard();
         p4[p4count] = card;
-        p4count++;
+        p4Count++;
       }
-      if (p4score == -1)
+      if (p4Score == -1)
         printf("\nPlayer 1 has busted")
-    } while (hitdecision == 1 && p4score != -1);
+    } while (hitDecision == 1 && p4Score != -1);
   }
   
 }
