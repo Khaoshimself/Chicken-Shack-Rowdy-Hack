@@ -130,7 +130,7 @@ int main(void){
       if (hitDecision = 1)
       {
         card = dealCard();
-        p4[p4count] = card;
+        p4[p4Count] = card;
         p4Count++;
       }
       if (p4Score == -1)
