@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <time.h>
 #include "header.c"
+#include <stdlib.h>
 
 int main(void){
   //player hands
@@ -11,6 +12,11 @@ int main(void){
   int p2[10];
   int p3[10];
   int p4[10];
+
+  int numPlayers;
+  int hitDecision = 0;
+  int p1Count = 0, p2Count = 0, p3Count = 0, p4Count = 0;
+  int card;
   
   int numPlayers; //number of players max 4
   int hitDecision; //hit or stand
@@ -23,13 +29,13 @@ int main(void){
   printf("Welcome to Black Jack! \n How many players?"); // welcome statement
   scanf("%d", &numPlayers);
   
-  if (numPlayers >= 1). //INITIAL DEALING OF THE CARDS
+  if (numPlayers >= 1)//INITIAL DEALING OF THE CARDS
   {
     
     for (int i = 0; i < 2; i++) {
-      card = dealcard();
-      p1[p1count] = card;
-      p1count++;
+      card = dealCard();
+      p1[p1Count] = card;
+      p1Count++;
       }
     
     }
@@ -37,9 +43,9 @@ int main(void){
   {
       
       for (int i = 0; i < 2; i++) {
-      card = dealcard();
-      p2[p2count] = card;
-      p2count++;
+      card = dealCard();
+      p2[p2Count] = card;
+      p2Count++;
       }
          
     }
@@ -47,9 +53,9 @@ int main(void){
   {
     
     for (int i = 0; i < 2; i++) {
-      card = dealcard();
-      p3[p3count] = card;
-      p3count++;
+      card = dealCard();
+      p3[p3Count] = card;
+      p3Count++;
       }
     
     }
@@ -57,9 +63,9 @@ int main(void){
   {
     
     for (int i = 0; i < 2; i++) {
-      card = dealcard();
-      p4[p4count] = card;
-      p4count++;
+      card = dealCard();
+      p4[p4Count] = card;
+      p4Count++;
       }
     
     }    
