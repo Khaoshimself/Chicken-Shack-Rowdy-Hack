@@ -4,15 +4,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-bool cardCount(int count){
-  
+int cardCount(int count){
+  printf("cardCount works");
 }
 int dealCard(){
-  
+  printf("cardCount works");
 }
 int calScore(int[]){
-  
+  printf("cardCount works");
 }
 void playerInfo(int p1, int p2, int p3, int p4){
-  
+  printf("cardCount works");
 }
