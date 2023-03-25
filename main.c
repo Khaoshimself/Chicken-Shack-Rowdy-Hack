@@ -11,6 +11,20 @@ int main(void) {
   int winner = 0;
   int winnerscore = 0;
   int p1Score = 0, p2Score = 0, p3Score = 0, p4Score = 0;
+  int *ace = 4;
+  int *one = 4;
+  int *two = 4;
+  int *three = 4;
+  int *four = 4;
+  int *five = 4;
+  int *six = 4;
+  int *seven = 4;
+  int *eight = 4;
+  int *nine = 4;
+  int *ten = 4;
+  int *jack = 4;
+  int *queen = 4;
+  int *king = 4;
   
   int numPlayers; //number of players max 4
   int hitDecision = 0; //hit or stand
