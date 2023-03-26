@@ -11,6 +11,7 @@ int main(void) {
   int winner = 0;
   int winnerscore = 0;
   int p1Score = 0, p2Score = 0, p3Score = 0, p4Score = 0;
+
   int *ace = 4;
   int *one = 4;
   int *two = 4;
@@ -25,7 +26,7 @@ int main(void) {
   int *jack = 4;
   int *queen = 4;
   int *king = 4;
-  
+ 
   int numPlayers; //number of players max 4
   int hitDecision = 0; //hit or stand
   
@@ -37,45 +38,49 @@ int main(void) {
   scanf("%d", &numPlayers);
   
   if (numPlayers >= 1) {//INITIAL DEALING OF THE CARDS
-    
+    printf("\nPlayer 1");
     for (int i = 0; i < 2; i++) {
       card = dealCard();
       p1[p1Count] = card;
       p1Count++;
       }
-    
+    p1score = calScore(p2[]);
+    printf("\nYour score is "%d, p1score);
     }
   if (numPlayers >= 2) {
-      
+      printf("\nPlayer 2");
       for (int i = 0; i < 2; i++) {
-      card = dealCard();
-      p2[p2Count] = card;
-      p2Count++;
+       card = dealCard();
+        p2[p2Count] = card;
+        p2Count++;
       }
-         
+      p2score = calScore(p2[]);
+      printf("\nYour score is "%d, p2 score);     
     }
   if (numPlayers >= 3) {
-    
+    printf("Player 3 ");
     for (int i = 0; i < 2; i++) {
       card = dealCard();
       p3[p3Count] = card;
       p3Count++;
       }
-    
+    p3score = calScore(p3[]);
+    printf("\nYour score is "%d, p3score);
     }
   if (numPlayers >= 4) { 
-    
+    printf("Player 4");
     for (int i = 0; i < 2; i++) {
       card = dealCard();
       p4[p4Count] = card;
       p4Count++;
       }
-    
+    p4score = calScore(p4[]);
+    printf("\nYour score is "%d, p4score);
     }    
   if (1 <= numPlayers) {
     do {
       p1Score = calScore (p1[]);
-      printf("\nPlayer 1 your score is %d, enter 1 to hit or 0 to stand", p1Score);
+      printf("\nPlayer 1 your score is "%d", enter 1 to hit or 0 to stand", p1Score);
       scanf("%d", &hitDecision);
       if (hitDecision == 1) {
         card = dealCard();
@@ -90,7 +95,7 @@ int main(void) {
   if (2 <= numPlayers) {
     do {
       p2Score = calScore (p2[]);
-      printf("\nPlayer 1 your score is %d, enter 1 to hit or 0 to stand", p2Score);
+      printf("\nPlayer 2 your score is "%d", enter 1 to hit or 0 to stand", p2Score);
       scanf("%d", &hitDecision);
       if (hitDecision == 1) {
         card = dealCard();
@@ -104,7 +109,7 @@ int main(void) {
   if (3 <= numPlayers) {
     do {
       p3Score = calScore (p3[]);
-      printf("\nPlayer 1 your score is %d, enter 1 to hit or 0 to stand", p3Score);
+      printf("\nPlayer 1 your score is "%d", enter 1 to hit or 0 to stand", p3Score);
       scanf("%d", &hitDecision);
       if (hitDecision == 1) {
         card = dealCard();
@@ -118,7 +123,7 @@ int main(void) {
  if (4 <= numPlayers) {
     do{
       p4Score = calScore (p4[]);
-      printf("\nPlayer 1 your score is %d, enter 1 to hit or 0 to stand", p4Score);
+      printf("\nPlayer 1 your score is "%d", enter 1 to hit or 0 to stand", p4Score);
       scanf("%d", &hitDecision);
       if (hitDecision == 1) {
         card = dealCard();
