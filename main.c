@@ -12,20 +12,20 @@ int main(void) {
   int winnerscore = 0;
   int p1Score = 0, p2Score = 0, p3Score = 0, p4Score = 0;
 
-  int *ace = 4;
-  int *one = 4;
-  int *two = 4;
-  int *three = 4;
-  int *four = 4;
-  int *five = 4;
-  int *six = 4;
-  int *seven = 4;
-  int *eight = 4;
-  int *nine = 4;
-  int *ten = 4;
-  int *jack = 4;
-  int *queen = 4;
-  int *king = 4;
+  int ace = 4;
+  int one = 4;
+  int two = 4;
+  int three = 4;
+  int four = 4;
+  int five = 4;
+  int six = 4;
+  int seven = 4;
+  int eight = 4;
+  int nine = 4;
+  int ten = 4;
+  int jack = 4;
+  int queen = 4;
+  int king = 4;
  
   int numPlayers; //number of players max 4
   int hitDecision = 0; //hit or stand
@@ -44,8 +44,8 @@ int main(void) {
       p1[p1Count] = card;
       p1Count++;
       }
-    p1score = calScore(p2[]);
-    printf("\nYour score is "%d, p1score);
+    p1Score = calScore(p2[]);
+    printf("\nYour score is %d", p1Score);
     }
   if (numPlayers >= 2) {
       printf("\nPlayer 2");
@@ -54,8 +54,8 @@ int main(void) {
         p2[p2Count] = card;
         p2Count++;
       }
-      p2score = calScore(p2[]);
-      printf("\nYour score is "%d, p2 score);     
+      p2Score = calScore(p2[]);
+      printf("\nYour score is %d", p2Score);     
     }
   if (numPlayers >= 3) {
     printf("Player 3 ");
@@ -64,8 +64,8 @@ int main(void) {
       p3[p3Count] = card;
       p3Count++;
       }
-    p3score = calScore(p3[]);
-    printf("\nYour score is "%d, p3score);
+    p3Score = calScore(p3[]);
+    printf("\nYour score is %d", p3Score);
     }
   if (numPlayers >= 4) { 
     printf("Player 4");
@@ -74,13 +74,13 @@ int main(void) {
       p4[p4Count] = card;
       p4Count++;
       }
-    p4score = calScore(p4[]);
-    printf("\nYour score is "%d, p4score);
+    p4Score = calScore(p4[]);
+    printf("\nYour score is %d", p4Score);
     }    
   if (1 <= numPlayers) {
     do {
       p1Score = calScore (p1[]);
-      printf("\nPlayer 1 your score is "%d", enter 1 to hit or 0 to stand", p1Score);
+      printf("\nPlayer 1 your score is %d, enter 1 to hit or 0 to stand", p1Score);
       scanf("%d", &hitDecision);
       if (hitDecision == 1) {
         card = dealCard();
@@ -95,7 +95,7 @@ int main(void) {
   if (2 <= numPlayers) {
     do {
       p2Score = calScore (p2[]);
-      printf("\nPlayer 2 your score is "%d", enter 1 to hit or 0 to stand", p2Score);
+      printf("\nPlayer 2 your score is %d, enter 1 to hit or 0 to stand", p2Score);
       scanf("%d", &hitDecision);
       if (hitDecision == 1) {
         card = dealCard();
@@ -109,7 +109,7 @@ int main(void) {
   if (3 <= numPlayers) {
     do {
       p3Score = calScore (p3[]);
-      printf("\nPlayer 1 your score is "%d", enter 1 to hit or 0 to stand", p3Score);
+      printf("\nPlayer 1 your score is %d, enter 1 to hit or 0 to stand", p3Score);
       scanf("%d", &hitDecision);
       if (hitDecision == 1) {
         card = dealCard();
@@ -123,7 +123,7 @@ int main(void) {
  if (4 <= numPlayers) {
     do{
       p4Score = calScore (p4[]);
-      printf("\nPlayer 1 your score is "%d", enter 1 to hit or 0 to stand", p4Score);
+      printf("\nPlayer 1 your score is %d, enter 1 to hit or 0 to stand", p4Score);
       scanf("%d", &hitDecision);
       if (hitDecision == 1) {
         card = dealCard();
@@ -135,32 +135,31 @@ int main(void) {
     } while (hitDecision == 1 && p4Score != -1);
   }
   
-  if (p1score > winnerscore){
+  if (p1Score > winnerscore){
       winner = 1;
-      winnerscore = p1score;
+      winnerscore = p1Score;
   }
   
-  if (p2score > winnerscore)
+  if (p2Score > winnerscore)
   {
     winner = 2;
-    winnerscore = p2score;
+    winnerscore = p2Score;
   }
   
-  if (p3score > winnerscore)
+  if (p3Score > winnerscore)
   {
     winner = 3;
-    winnerscore = p3score;
+    winnerscore = p3Score;
   }
   
-  if (p4score > winnerscore)
+  if (p4Score > winnerscore)
   {
     winner = 4;
-    winnerscore = p4score;
+    winnerscore = p4Score;
   }
-  if (winner = 0)
-        printf("\nAll players have busted")
+  if (winner == 0)
+        printf("\nAll players have busted");
   else {
-    printf("Player "%d" wins with a score of ");
-    printf(winnerscore);
+    printf("Player %d wins with a score of ", winnerscore);
   }
 }
