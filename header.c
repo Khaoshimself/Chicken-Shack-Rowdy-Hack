@@ -11,7 +11,7 @@ int dealCard () {
   do {
     srand(time(0));
     card = (rand() % 13) + 1;
-    bool available = cardCount(&card);
+    bool available = cardCount(card);
   } 
     while (available == false);
   return card;
@@ -31,10 +31,10 @@ int calScore (int array[]) {
   return total;
   }
 
-bool cardCount (int &card) {
+bool cardCount (int card) {
   switch (card) {
     case 1 :       
-      int* pointer = *ace;
+      int *pointer = *ace;
        if (*pointer > 0)
       {
         printf("\nYou drew an Ace. Is it 1 or 11");
