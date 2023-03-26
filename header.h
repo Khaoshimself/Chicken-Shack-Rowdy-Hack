@@ -11,6 +11,6 @@ players;
 int dealCard();
 int calScore(int array[]);
 void playerInfo(int p1, int p2, int p3, int p4);
-bool cardCount (int card);
+bool cardCount (int &card);
 
 #endif //end of header.h file
